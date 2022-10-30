@@ -1,0 +1,54 @@
+.register,
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #88d3ce 0%, #6e45e2 100%);
+    /* background-image: linear-gradient(to right, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%); */
+    /* background-image: linear-gradient(to right, #9795f0 0%, #fbc8d4 100%); */
+}
+
+.lottie {
+    height: 400px;
+}
+
+.register input,
+.login input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(92, 84, 84);
+    color: rgb(236, 233, 233);
+    outline: none;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+}
+
+label,
+a {
+    color: rgb(233, 231, 231) !important;
+}
+
+.register h1,
+.login h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width:700px) {
+
+    .register h1,
+    .login h1 {
+        padding-top: 30px;
+    }
+
+    .lottie {
+        height: 300px;
+    }
+}
