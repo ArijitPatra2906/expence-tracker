@@ -23,7 +23,7 @@ function Home() {
         const user = JSON.parse(localStorage.getItem("expence tracker user"))
         try {
             setLoading(true)
-            const response = await axios.post("http://localhost:4000/api/transaction/get-alltransaction", { userId: user._id, frequency, ...(frequency === "custom" && { selectedRange }), type })
+            const response = await axios.post("https://trackmymoneybackend.herokuapp.com/api/transaction/get-alltransaction", { userId: user._id, frequency, ...(frequency === "custom" && { selectedRange }), type })
             setLoading(false)
             setTransactionData(response.data)
             // console.log(transactionData)
@@ -36,7 +36,7 @@ function Home() {
         const user = JSON.parse(localStorage.getItem("expence tracker user"))
         try {
             setLoading(true)
-            await axios.post("http://localhost:4000/api/transaction/delete-transaction", { transactionId: record._id })
+            await axios.post("https://trackmymoneybackend.herokuapp.com/api/transaction/delete-transaction", { transactionId: record._id })
             message.success("Transaction deleted Successfully!!")
             getTransaction()
             setLoading(false)

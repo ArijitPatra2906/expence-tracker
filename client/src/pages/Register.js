@@ -18,7 +18,7 @@ function Register() {
         // };
         try {
             setLoading(true)
-            await axios.post("http://localhost:4000/api/users/register", values)
+            await axios.post("https://trackmymoneybackend.herokuapp.com/api/users/register", values)
             // console.log(response.config?.data)
             // localStorage.setItem("expence tracker user", JSON.stringify({response.config?.data, password: "" }))
             setLoading(false)

@@ -11,11 +11,11 @@ function AddEditTransaction({ edit, setEdit, getTransaction, showAddEditTransact
             const user = JSON.parse(localStorage.getItem("expence tracker user"))
             setLoading(true)
             if (edit) {
-                await axios.post("http://localhost:4000/api/transaction/edit-transaction", { payload: { ...values, userId: user._id, }, transactionId: edit._id })
+                await axios.post("https://trackmymoneybackend.herokuapp.com/api/transaction/edit-transaction", { payload: { ...values, userId: user._id, }, transactionId: edit._id })
                 getTransaction()
                 message.success("Transaction Updated Successfull")
             } else {
-                await axios.post("http://localhost:4000/api/transaction/add-transaction", { ...values, userId: user._id })
+                await axios.post("https://trackmymoneybackend.herokuapp.com/api/transaction/add-transaction", { ...values, userId: user._id })
                 getTransaction()
                 message.success("Transaction Added Successfull")
             }
