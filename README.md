@@ -2,7 +2,7 @@
 
 # Live demo
 <div>
-<a href="https://track-my-money.vercel.app/" target="_blank">React Stopwatch</a>
+<a href="https://track-my-money.vercel.app/" target="_blank">Track my money</a>
 </div>
 <hr/>
 This is a simple React Timer app with buttons to start, stop, pause and reset the timer.
