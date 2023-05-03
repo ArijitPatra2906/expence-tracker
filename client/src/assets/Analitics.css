@@ -1,28 +1,28 @@
 .transactions-count {
-    box-shadow: 0 0 2px rgb(146, 145, 145);
-    padding: 15px;
-    border-radius: 10px;
-    color: rgb(31, 30, 30) !important;
+  box-shadow: 0 0 2px rgb(146, 145, 145);
+  padding: 15px;
+  border-radius: 10px;
+  color: rgb(31, 30, 30) !important;
 }
 
 .analitics h4 {
-    font-size: 20px;
-    color: grey !important;
-    font-weight: 600;
+  font-size: 20px;
+  color: grey !important;
+  font-weight: 600;
 }
 
 .analitics h5 {
-    color: grey !important;
-    font-size: 18px;
+  color: grey !important;
+  font-size: 18px;
 }
 
 .category-card {
-    padding: 20px 10px;
-    box-shadow: 0 0 2px grey;
-    margin-top: 15px;
-    border-radius: 5px;
+  padding: 20px 10px;
+  box-shadow: 0 0 2px grey;
+  margin-top: 15px;
+  border-radius: 5px;
 }
 
 .category-card h5 {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }

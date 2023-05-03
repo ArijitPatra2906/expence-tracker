@@ -1,75 +1,74 @@
 .filter {
-    box-shadow: 0 0 2px grey;
-    padding: 10px 20px;
-    border-radius: 5px;
+  box-shadow: 0 0 2px grey;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .transactionForm label,
 .moment {
-    color: rgba(0, 0, 0, 0.795) !important;
+  color: rgba(0, 0, 0, 0.795) !important;
 }
 
 .transactionForm input {
-    border: 1px solid grey;
-    box-shadow: none;
+  border: 1px solid grey;
+  box-shadow: none;
 }
 
 .transactionForm input:focus {
-    border: 1px solid grey;
-    box-shadow: none;
+  border: 1px solid grey;
+  box-shadow: none;
 }
 
 .transactionForm input:hover {
-    border: 1px solid grey;
-    box-shadow: none;
+  border: 1px solid grey;
+  box-shadow: none;
 }
 
 .ant-select-selector {
-    border: 1px solid grey !important;
-    box-shadow: none;
+  border: 1px solid grey !important;
+  box-shadow: none;
 }
 
 .ant-select-selector:hover {
-    border: 1px solid grey;
-    box-shadow: none;
+  border: 1px solid grey;
+  box-shadow: none;
 }
 
 .ant-select-selector:focus {
-    border: 1px solid grey;
-    box-shadow: none;
+  border: 1px solid grey;
+  box-shadow: none;
 }
 
 .ant-picker-range {
-    border: 1px solid black !important;
+  border: 1px solid black !important;
 }
 
 .view-switch {
-    border: 1px solid black;
-    padding: 5px 20px;
-    border-radius: 3px;
+  border: 1px solid black;
+  padding: 5px 20px;
+  border-radius: 3px;
 }
 
 .anticon svg {
-    font-size: 30px;
-    cursor: pointer;
-    padding-left: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  padding-left: 10px;
 }
 
 .active-icon {
-    color: black;
+  color: black;
 }
 
 .inactive-icon {
-    color: grey;
+  color: grey;
 }
 
 .tableView {
-    height: fit-content;
+  height: fit-content;
 }
 
-
-@media screen and (max-width:700px) {
-    .filter {
-        overflow-x: scroll;
-    }
+@media screen and (max-width: 700px) {
+  .filter {
+    overflow-x: scroll;
+  }
 }
