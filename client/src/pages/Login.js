@@ -17,7 +17,7 @@ function Login() {
         `${process.env.REACT_APP_BASEURL}/api/users/login`,
         values
       );
-      console.log(response.data);
+      // console.log(response.data);
       localStorage.setItem(
         "expence tracker user",
         JSON.stringify({ ...response.data, password: "" })

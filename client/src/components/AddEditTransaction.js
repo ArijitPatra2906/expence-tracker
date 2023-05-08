@@ -10,6 +10,7 @@ function AddEditTransaction({
   showAddEditTransactionModal,
   setShowAddEditTransactionModal,
 }) {
+  console.log(edit);
   const [loading, setLoading] = useState(false);
 
   const onFinish = async (values) => {
@@ -74,6 +75,7 @@ function AddEditTransaction({
             <Select.Option value="recharge">Recharge</Select.Option>
             <Select.Option value="education">Education</Select.Option>
             <Select.Option value="investment">Investment</Select.Option>
+            <Select.Option value="shopping">Shopping</Select.Option>
             <Select.Option value="emi">EMI</Select.Option>
             <Select.Option value="others">Others</Select.Option>
           </Select>

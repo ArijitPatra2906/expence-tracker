@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import "../assets/Transaction.css";
-import { DatePicker, message, Select, Table } from "antd";
+import { Button, DatePicker, message, Modal, Select, Table } from "antd";
 import AddEditTransaction from "../components/AddEditTransaction";
 import axios from "axios";
 import Spinner from "../components/Spinner";
@@ -13,7 +13,15 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import Analitics from "../components/Analitics";
+import { useNavigate } from "react-router-dom";
 function Home() {
+  const navigate = useNavigate();
+  const user = window.localStorage.getItem("expence tracker user");
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  }, []);
   const { RangePicker } = DatePicker;
   const [showAddEditTransactionModal, setShowAddEditTransactionModal] =
     useState(false);
@@ -24,7 +32,21 @@ function Home() {
   const [selectedRange, setSelectedRange] = useState([]);
   const [viewType, setViewType] = useState("table");
   const [edit, setEdit] = useState(null);
-  // const [delete, setDelete] = useState(null)
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   const getTransaction = async () => {
     const user = JSON.parse(localStorage.getItem("expence tracker user"));
     try {
@@ -51,7 +73,7 @@ function Home() {
       message.error("Something went wrong");
     }
   };
-  console.log(transactionData);
+
   const deleteTransaction = async (record) => {
     const user = JSON.parse(localStorage.getItem("expence tracker user"));
     try {
@@ -90,33 +112,60 @@ function Home() {
       title: "Type",
       dataIndex: "type",
       key: "type",
+      render: (params) => (
+        <label
+          className="moment"
+          style={{
+            textTransform: "capitalize",
+          }}
+        >
+          {params}
+        </label>
+      ),
     },
     {
       title: "Category",
       dataIndex: "category",
       key: "category",
+      render: (params) => (
+        <label
+          className="moment"
+          style={{
+            textTransform: "capitalize",
+          }}
+        >
+          {params}
+        </label>
+      ),
     },
     {
       title: "Reference",
       dataIndex: "reference",
       key: "reference",
+      render: (params) => (
+        <label
+          className="moment"
+          style={{
+            textTransform: "capitalize",
+          }}
+        >
+          {params}
+        </label>
+      ),
     },
     {
       title: "Actions",
       dataIndex: "actions",
       render: (text, record) => {
         return (
-          <div>
+          <div style={{ display: "flex", alignItems: "center" }}>
             <EditOutlined
               onClick={() => {
                 setEdit(record);
                 setShowAddEditTransactionModal(true);
               }}
             />
-            <DeleteOutlined
-              className="mx-3"
-              onClick={() => deleteTransaction(record)}
-            />
+            <DeleteOutlined className="mx-3" />
           </div>
         );
       },

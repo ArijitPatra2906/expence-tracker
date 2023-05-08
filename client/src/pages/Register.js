@@ -26,7 +26,6 @@ function Register() {
       // localStorage.setItem("expence tracker user", JSON.stringify({response.config?.data, password: "" }))
       setLoading(false);
       message.success("Registration Successfull");
-
       navigate("/login");
     } catch (error) {
       setLoading(false);
